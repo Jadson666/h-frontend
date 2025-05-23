@@ -38,4 +38,6 @@ export const connectWs = (props?: { onmessage?: (data: WsResponse) => void }) =>
   ws.onerror = (error) => {
     console.error('WebSocket error:', error);
   };
+
+  return ws
 };
