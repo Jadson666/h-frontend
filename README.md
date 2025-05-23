@@ -11,17 +11,16 @@
   - real-time communication is needed
 - TailwindCSS
   - it's demo project, effeciency is important
+- react-window
+  - virtualized list handle large size data
 # How to start the project
 ```
 yarn dev
 ```
 # Project Guide
-1. optimize Performance use no-library vanllia JS virtualized list, only render the record in-screen
+1. optimize Performance use react-window (virtualized list), only render the record in-screen
+2. async logging pattern to avoid bouncing and layout jumping
 2. handle error - retry when lost connection
-3. display slide-in animation when new record is added
-4. no RWD is added, recommand to open on Desktop
-   - tailwind has build-in css utils can handle RWD, but I have no more time today.
-
 
 # Task and related progress
 1. Display news items in a list format, with each item showing:
@@ -37,7 +36,7 @@ yarn dev
 2. Real-time updates:
    - [x] New items should appear immediately when received
    - [x] Items should be sorted by timestamp (newest first)
-   - [x] (Optional) Animation to catch the users' attention when new items appear
+   - [ ] (Optional) Animation to catch the users' attention when new items appear
 
 3. Filtering:
    - [x] Allow filtering by news source
