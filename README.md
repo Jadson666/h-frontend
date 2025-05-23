@@ -2,6 +2,8 @@
 1. a table to display data from websocket
 2. a filter to search by keyword
 3. other detailed requirement, see below
+# Screenshot
+![](./public/demo.png)
 # Tech stack
 - Vite
   - Websocket is more CSR project, no need to use SSR like Next.js
