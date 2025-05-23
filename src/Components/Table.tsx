@@ -71,7 +71,7 @@ function Table({ itemHeight = 100, windowHeight = 500, keyFilter = '', sourceFil
             return (
               <div
                 style={style}
-                className={`px-4 border-t border-gray-300 p-2 bg-gray-100 hover:bg-gray-200 grid ${gridColumnRules} items-center ${
+                className={`px-4 border-t border-gray-300 p-2 bg-gray-50 hover:bg-gray-200 grid ${gridColumnRules} items-center ${
                   priority ? 'bg-red-100' : ''
                 }`}
               >
@@ -82,7 +82,7 @@ function Table({ itemHeight = 100, windowHeight = 500, keyFilter = '', sourceFil
                     <a
                       href={link}
                       target='_blank'
-                      className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'
+                      className='underline text-blue-300 hover:text-blue-800 visited:text-purple-600'
                     >
                       Link
                     </a>
@@ -95,10 +95,10 @@ function Table({ itemHeight = 100, windowHeight = 500, keyFilter = '', sourceFil
                 <div>
                   <button
                     type='button'
-                    className='cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'
+                    className='cursor-pointer text-white bg-blue-800 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-500 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'
                     onClick={() => console.log(filteredList[index])}
                   >
-                    Log to console
+                    Print Log
                   </button>
                 </div>
               </div>

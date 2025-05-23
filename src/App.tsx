@@ -40,7 +40,7 @@ function App() {
             *background of row will be <span className='text-red-400'>red</span> when Priority is high
           </div>
           <div className='border border-gray-300 rounded-2xl overflow-hidden'>
-            <div className={`px-4 py-8 col-span-7 grid ${gridColumnRules} bg-green-700 text-white`}>
+            <div className={`px-4 py-8 col-span-7 grid ${gridColumnRules} bg-gray-600 text-white`}>
               <div className='font-bold'>SOURCE</div>
               <div className='font-bold'>HEADLINE</div>
               <div className='font-bold'>LINK</div>
