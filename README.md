@@ -15,6 +15,8 @@
   - it's demo project, effeciency is important
 - react-window
   - virtualized list handle large size data
+- AI tools
+  - only copilot to support coding
 # How to start the project
 ```
 yarn dev
@@ -22,11 +24,12 @@ yarn dev
 # Project Guide
 1. optimize Performance use react-window (virtualized list), only render the record in-screen
 2. async logging pattern to avoid bouncing and layout jumping
-2. handle error - retry when lost connection
+3. handle error - retry when lost connection
+4. RWD is not applied, please start the project on Desktop
 
 # Task and related progress
 1. Display news items in a list format, with each item showing:
-   - [x] imestamp, in either local time or UTC
+   - [x] Timestamp, in either local time or UTC
    - [x] Headline
    - [x] Source
    - [x] Link, if provided

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { FixedSizeList as List } from 'react-window';
-import { wsAdapter, type ResponseDAO } from '../adapter';
-import { connectWs } from '../ws';
+import { wsAdapter, type ResponseDAO } from '../utils/adapter';
+import { connectWs } from '../utils/ws';
 import { gridColumnRules } from './constants';
 import { filterRecord } from '../filter';
 import { SimpleLoading } from './SimpleLoading';
