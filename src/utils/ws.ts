@@ -32,7 +32,7 @@ export const connectWs = (props?: { onmessage?: (data: WsResponse) => void }) =>
   };
 
   ws.onclose = () => {
-    if (!timer) timer = setInterval(connectWs, reconnectInterval);
+    if (!timer) timer = setInterval(() => connectWs({ onmessage: props?.onmessage }), reconnectInterval);
   };
 
   ws.onerror = (error) => {

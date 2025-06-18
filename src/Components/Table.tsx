@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { FixedSizeList as List } from 'react-window';
 import { wsAdapter, type ResponseDAO } from '../utils/adapter';
-import { connectWs } from '../utils/ws';
 import { gridColumnRules } from './constants';
 import { filterRecord } from '../filter';
 import { SimpleLoading } from './SimpleLoading';
+import { SocketManager } from '../utils/SocketManager';
 
 const keySet = new Set();
 
@@ -41,23 +41,21 @@ function Table({ itemHeight = 100, windowHeight = 500, keyFilter = '', sourceFil
   }, [flushBuffer, itemHeight]);
 
   useEffect(() => {
-    const ws = connectWs({
-      onmessage: (data) => {
+    const ws = new SocketManager('ws://localhost:8080', (data) => {
         if (!keySet.has(data.id)) {
           if (listRef.current) {
               buffer.current.unshift(wsAdapter(data));
               keySet.add(data.id);
           }
         }
-      }
-    });
+      })
     return () => ws.close()
-  }, [list]);
+  }, []);
 
   return (
     <div>
       {isLoading && <SimpleLoading />}
-      {
+      { 
         <List
           ref={listRef}
           height={windowHeight}
